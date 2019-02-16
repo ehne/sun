@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="the weather">
+		<meta name="theme-color" content="#00ECFF" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- end meta tags -->
+		<title>Sun</title>
+		
+		<link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css" type="text/css" media="screen" charset="utf-8">
+        
+<script
+  src="./jquery-3.3.1.min.js"></script>        <script src="script.js" charset="utf-8"></script>
+        
+        
+        <link rel="manifest" href="manifest.json">
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="Sun">
+<meta name="apple-mobile-web-app-title" content="Sun">
+<meta name="theme-color" content="#00ecff">
+<meta name="msapplication-navbutton-color" content="#00ecff">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="msapplication-starturl" content="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" type="image/png" sizes="192x192" href="icon192.png">
+<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="icon192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon512.png">
+<link rel="apple-touch-icon" type="image/png" sizes="512x512" href="icon512.png">
+
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js');
+}
+</script>
+
+	</head>
+	<body class="">
+		<div class="is-width-small is-centered">
+    		<h1 class="is-text-center is-description is-inset-top-8"><span id="description"><b>Mostly Sunny</b></span></h1>
+    		
+    		<div class="is-100 is-text-center">
+        		
+    			<span id="icon" class="is-center is-icon"><i class="wi wi-refresh is-icon"></i></span>
+                
+    		</div>	
+    		<div class="is-100 is-text-center">
+        		<b>
+        		<span id="temp" class="is-temp">Loading</span>
+        		</b>
+    		</div>
+    		<br>
+    		<div class="is-100 is-append">
+                <div class="is-45">
+                    <div class="is-card is-background is-100">
+                        <div class="is-inset-8 is-append">
+                            <div class="is-70">
+                            	<span class="is-card-title">Rain</span>
+                                <br>
+                                <span class="is-card-data" id="rain">Loading...</span>
+                            </div>
+                            <div class="is-push-right is-rain-icon-bg">
+                                <i class="wi wi-raindrop is-rain-icon is-100"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="is-45 is-push-right">
+                    <div class="is-card is-background is-100">
+                        <div class="is-inset-8 is-append">
+                            <div class="is-70">
+                            	<span class="is-card-title">UV Index</span>
+                                <br>
+                                <span class="is-card-data" id="uv">Loading...</span>
+                            </div>
+                            <div class="is-push-right is-uv-icon-bg is-41">
+                                <i class="wi wi-day-sunny is-uv-icon is-100"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>
