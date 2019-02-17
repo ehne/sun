@@ -35,11 +35,7 @@
 <link rel="apple-touch-icon" type="image/png" sizes="512x512" href="icon512.png">
 
 
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js');
-}
-</script>
+
 
 	</head>
 	<body class="">
@@ -112,5 +108,11 @@ if ('serviceWorker' in navigator) {
             </div>
         </div>
         <br>
+        <script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js');
+}
+</script>
 	</body>
+	
 </html>

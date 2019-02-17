@@ -1,11 +1,7 @@
 // we'll version our cache (and learn how to delete caches in
 // some other post)
-caches.delete('v1::static');
-caches.delete('v2::static');
-caches.delete('v3::static');
+
 const cacheName = 'v4::static';
-
-
 
 
 self.addEventListener('install', e => {
