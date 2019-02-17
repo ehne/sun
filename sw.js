@@ -1,7 +1,9 @@
 // we'll version our cache (and learn how to delete caches in
 // some other post)
 
-const cacheName = 'v4::static';
+const cacheName = 'v9::static';
+
+
 
 
 self.addEventListener('install', e => {

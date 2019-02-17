@@ -1,47 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="description" content="the weather">
-		<meta name="theme-color" content="#fa0" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- end meta tags -->
-		<title>Sun</title>
-		
-		<link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css" type="text/css" media="screen" charset="utf-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js" charset="utf-8">
-        </script>
-        
-<script
-  src="./jquery-3.3.1.min.js"></script>        <script src="script.js" charset="utf-8"></script>
-        
-        
-        <link rel="manifest" href="manifest.json">
-
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="application-name" content="Sun">
-<meta name="apple-mobile-web-app-title" content="Sun">
-<meta name="theme-color" content="#fa0">
-<meta name="msapplication-navbutton-color" content="#fa0">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="msapplication-starturl" content="/">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<link rel="icon" type="image/png" sizes="192x192" href="icon192.png">
-<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="icon192.png">
-<link rel="icon" type="image/png" sizes="512x512" href="icon512.png">
-<link rel="apple-touch-icon" type="image/png" sizes="512x512" href="icon512.png">
-
-
-
-
-	</head>
-	<body class="">
-    	<div class="is-v-90">
-    		<div class="is-width-small is-centered">
-        		<h1 class="is-text-center is-description is-inset-top-8"><span id="description"><b>Loading Weather</b></span></h1>
+<sun-content>
+<h1 class="is-text-center is-description is-inset-top-8"><span id="description"><b>Loading Weather</b></span></h1>
         		
         		<div class="is-100 is-text-center">
             		
@@ -105,27 +63,4 @@
                 		<span class="is-card-data">Powered by <a href="https://darksky.net">darksky</a></span>
             		</div>
                 </div>
-                <br>
-            </div>
-            
-        </div>
-        
-        <script>
-//This is the service worker with the Cache-first network
-
-//Add this below content to your HTML page, or add the js file to your page at the very top to register service worker
-if (navigator.serviceWorker.controller) {
-  console.log('[PWA Builder] active service worker found, no need to register')
-} else {
-
-//Register the ServiceWorker
-  navigator.serviceWorker.register('./sw.js', {
-    scope: './'
-  }).then(function(reg) {
-    console.log('Service worker has been registered for scope:'+ reg.scope);
-  });
-}
-</script>
-	</body>
-	
-</html>
+</sun-content>
