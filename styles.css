@@ -254,7 +254,7 @@ height:41px;
 }
 
 .is-inset-top-8 {
-    margin-top: 5vh
+    margin-top: 8px
 }
 .is-big-icon {
     display: inline-block !important;
@@ -295,4 +295,11 @@ height:41px;
     transform: scale(1.0);
     opacity: 0;
   }
+}
+
+.is-inset-top-4 {
+    margin-top: 4px
+}
+.is-v-20 {
+    height: 30vh
 }

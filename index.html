@@ -10,6 +10,9 @@
 		
 		<link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css" type="text/css" media="screen" charset="utf-8">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.js" charset="utf-8">
+        	
+        </script>
         
 <script
   src="./jquery-3.3.1.min.js"></script>        <script src="script.js" charset="utf-8"></script>
@@ -85,6 +88,8 @@ if ('serviceWorker' in navigator) {
                     </div>
                 </div>
             </div>
+    		<div class="is-100 is-card is-background is-inset-top-8"><canvas id="weatherChart" class="is-v-20"></canvas>
+</div>
         </div>
 	</body>
 </html>
