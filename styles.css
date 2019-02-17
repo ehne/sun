@@ -1,7 +1,6 @@
 body {
-    background-image: linear-gradient(165deg, #00ecff 0%, #00d4ff 100%);
+    background-color: #fa0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    height: 100vh
 }
 
 .is-width-small {
