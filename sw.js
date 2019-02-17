@@ -1,8 +1,10 @@
 // we'll version our cache (and learn how to delete caches in
 // some other post)
-const cacheName = 'v3::static';
 caches.delete('v1::static');
 caches.delete('v2::static');
+caches.delete('v3::static');
+const cacheName = 'v4::static';
+
 
 
 
