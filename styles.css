@@ -303,3 +303,50 @@ height:41px;
 .is-v-20 {
     height: 30vh
 }
+
+.is-sunset-icon-bg {
+background: #00657a;
+border-radius: 4px;
+width:41px;
+height:41px;
+
+  align-items: center;
+}
+.is-sunset-icon {
+    color: white;
+    font-size: 1.7rem;
+    margin-left: 10%;
+    margin-top: 19%;
+}
+.is-sunrise-icon-bg {
+background: #00657a;
+border-radius: 4px;
+width:41px;
+height:41px;
+
+  align-items: center;
+}
+.is-sunrise-icon {
+    color: white;
+    font-size: 1.7rem;
+    margin-left: 9%;
+    margin-top: 22%;
+}
+.is-v-90 {
+    height: 95vh
+}
+.is-v-10 {
+    height:5vh
+}
+a:hover{
+    color:#fa0
+}
+a {
+    color: black
+}
+.is-card-data > a {
+    color:#BEBEBE
+}
+.is-card-data > a:hover {
+    color:#fa0
+}
