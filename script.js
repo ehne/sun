@@ -11,6 +11,58 @@
       highTemp: [],
     }
 
+    $.getJSON("https://api.ipify.org?format=json" , function(data){
+        var latlongurl = "https://api.jsonbin.io/g/"+data.ip;
+        console.log(latlongurl);
+
+        $.getJSON(latlongurl, function(data){
+          var lat = data.data.ll[0];
+          var long = data.data.ll[1];
+          console.log(lat + " " + long);
+
+          var darkskyurl = "https://api.darksky.net/forecast/55c3094a65ec3abf647b001be8293bf1/" + lat + "," + long + "?callback=?&units=si";
+
+          $.getJSON(darkskyurl, function(data){
+            
+            console.log(data);
+            var temp = data.currently.temperature;
+            var celsius = data.currently.temperature.toFixed(1) + "&deg;C";
+            var description = data.currently.summary;
+            var icon = "is-icon is-big-icon wi wi-forecast-io-" + data.currently.icon;
+            var rain = (data.currently.precipProbability * 100).toFixed(0) + " %";
+            var uvIndex = data.currently.uvIndex;
+            
+            var summary = data.hourly.summary;
+            var weekSummary = data.daily.summary;
+
+            setTimeout(function() {
+              $("#icon").html("<i class=\"" + icon + "\">");
+
+              $("#description").html(description);
+
+              $("#temp").html(celsius);
+
+              $("#rain").html(rain)
+              $("#uv").html(uvIndex)
+              
+              $("#summary").html(summary)
+              $("#weekly-summary").html(weekSummary)
+
+              var todayMaxTemp = data.daily.data[0].temperatureMax.toFixed(0);
+              var todayMinTemp = data.daily.data[0].temperatureMin.toFixed(0);
+              var todayIcon = "wi wi-forecast-io-" + data.daily.data[0].icon;
+              $("#todayC").html("<br>"+ todayMinTemp + "&deg;/"+ todayMaxTemp +"&deg; <br> <i class=\"" + todayIcon + "\" id=\"smallIcon\">");
+
+            },100)
+
+          })
+
+        });
+
+    });
+    
+
+
 
   if (navigator.geolocation) {
 
@@ -23,9 +75,11 @@
 
     
    setTimeout(function(){
-		$('div').removeClass('loader');
+    $('div').removeClass('loader');
+    
 	}, 1500);     
-
+    
+    
       var url = "https://api.darksky.net/forecast/55c3094a65ec3abf647b001be8293bf1/" + latitude + "," + longitude + "?callback=?&units=si";
 
       $.getJSON(url, function(data) {
@@ -80,6 +134,7 @@
     });
   } else {
     alert("We couldn` retrieve your location, please check your location settings");
+    
   };
 
 });
