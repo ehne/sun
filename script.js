@@ -12,12 +12,12 @@
     }
 
     $.getJSON("https://api.ipify.org?format=json" , function(data){
-        var latlongurl = "https://api.jsonbin.io/g/"+data.ip;
+        var latlongurl = "https://api.ipgeolocation.io/ipgeo?apiKey=f18db9751b144eed999a97615ded78e2&ip="+data.ip;
         console.log(latlongurl);
 
         $.getJSON(latlongurl, function(data){
-          var lat = data.data.ll[0];
-          var long = data.data.ll[1];
+          var lat = data.latitude;
+          var long = data.longitude;
           console.log(lat + " " + long);
 
           var darkskyurl = "https://api.darksky.net/forecast/55c3094a65ec3abf647b001be8293bf1/" + lat + "," + long + "?callback=?&units=si";
